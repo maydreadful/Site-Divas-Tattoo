@@ -1,46 +1,58 @@
 * {
   margin: 0;
-  padding: 0; /* Redefinido para evitar espaçamento excessivo */
+  padding: 0;
+  /* Redefinido para evitar espaçamento excessivo */
   box-sizing: border-box;
 }
 
 /* Estilos do corpo */
 body {
-    background-color: black;
-    color: white;
-    margin: 0;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
+  background-color: black;
+  color: white;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
 
 header {
-    background: no-repeat center;
-    background-size: cover;
-    height: auto; /* Ajuste para se adaptar ao conteúdo */
-    padding: 20px 0; /* Adiciona espaçamento ao redor do conteúdo */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    position:relative
-  }
-  
+  background: no-repeat center;
+  background-size: cover;
+  height: auto;
+  /* Ajuste para se adaptar ao conteúdo */
+  padding: 20px 0;
+  /* Adiciona espaçamento ao redor do conteúdo */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative
+}
+
+header .banner img {
+  width: 100%;
+  /* A imagem ocupará 100% da largura do contêiner */
+  height: auto;
+  /* A altura será ajustada proporcionalmente */
+  max-width: 1200px;
+  /* Define um limite máximo para a largura da imagem */
+}
 
 main {
   padding: 20px;
-  padding-bottom: 60px; /* Espaço para o rodapé */
+  padding-bottom: 60px;
+  /* Espaço para o rodapé */
 }
 
 section {
   margin-bottom: 40px;
 }
 
-
-
 nav {
-  background-color: #333; /* Cor de fundo do menu */
+  background-color: #333;
+  /* Cor de fundo do menu */
   width: 100%;
-  text-align: center; /* Centraliza o texto dos links */
+  text-align: center;
+  /* Centraliza o texto dos links */
 }
 
 .menu {
@@ -52,20 +64,20 @@ nav {
 }
 
 .menu li {
-  margin: 0 15px; /* Espaçamento entre os itens do menu */
+  margin: 0 15px;
+  /* Espaçamento entre os itens do menu */
 }
 
 .menu a {
-  font-size: 18px; /* Ajuste o tamanho da fonte conforme necessário */
-  color: #ddd; /* Cor padrão dos links */
+  font-size: 18px;
+  /* Ajuste o tamanho da fonte conforme necessário */
+  color: #ddd;
+  /* Cor padrão dos links */
   text-decoration: none;
-  padding: 10px 15px; /* Adiciona espaçamento interno aos links */
+  padding: 10px 15px;
+  /* Adiciona espaçamento interno aos links */
 }
 
-.menu li:hover {
-  background: url("data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4KPHN2ZyB2ZXJzaW9uPSIxLjEi%0D%0AIGlkPSJMYXllcl8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhs%0D%0AaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCIKCSB3aWR0%0D%0AaD0iMzkwcHgiIGhlaWdodD0iNTBweCIgdmlld0JveD0iMCAwIDM5MCA1MCIgZW5hYmxlLWJhY2tn%0D%0Acm91bmQ9Im5ldyAwIDAgMzkwIDUwIiB4bWw6c3BhY2U9InByZXNlcnZlIj4KPHBhdGggZmlsbD0i%0D%0Abm9uZSIgc3Ryb2tlPSIjZDk0ZjVjIiBzdHJva2Utd2lkdGg9IjEuNSIgc3Ryb2tlLW1pdGVybGlt%0D%0AaXQ9IjEwIiBkPSJNMCw0Ny41ODVjMCwwLDk3LjUsMCwxMzAsMAoJYzEzLjc1LDAsMjguNzQtMzgu%0D%0ANzc4LDQ2LjE2OC0xOS40MTZDMTkyLjY2OSw0Ni41LDI0My42MDMsNDcuNTg1LDI2MCw0Ny41ODVj%0D%0AMzEuODIxLDAsMTMwLDAsMTMwLDAiLz4KPC9zdmc+Cg==");
-  animation: line 1s;
-}
 
 .menu li:hover a {
   color: #74056f;
@@ -74,28 +86,85 @@ nav {
 .menu li:not(:last-child) {
   margin-right: 30px;
 }
+
 @keyframes line {
   0% {
     background-position-x: 390px;
   }
-  }
+}
 
 .container {
-    background-color: white;
-    color: black;
-    padding: 20px;
-    border-radius: 8px;
-    max-width: 800px;
-    margin: 20px auto; /* Centraliza o container e adiciona espaçamento ao redor */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  background-color: white;
+  color: black;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 800px;
+  margin: 20px auto;
+  /* Centraliza o container e adiciona espaçamento ao redor */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+footer {
+  background-color: #333;
+  /* Cor de fundo do rodapé */
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  color: white;
+}
+
+/* Media Queries para telas menores */
+@media (max-width: 768px) {
+  .menu {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .menu li {
+    margin: 10px 0;
+  }
+
+  .container {
+    padding: 15px;
+    margin: 10px auto;
+  }
+
+  header img {
+    width: 100%;
+    /* Imagem do banner ocupa 100% da largura */
+    height: auto;
+  }
+
+  section img {
+    width: 100%;
+    /* Imagem das seções ocupam 100% da largura */
+    height: auto;
+  }
+
+  main {
+    padding: 15px;
+  }
+}
+
+/* Media Queries para telas ainda menores (como celulares pequenos) */
+@media (max-width: 480px) {
+
+
+  .menu a {
+    font-size: 16px;
+    /* Diminui o tamanho da fonte no menu */
+    padding: 8px 10px;
+  }
+
+  .container {
+    padding: 10px;
   }
 
   footer {
-    background-color: #333; /* Cor de fundo do rodapé */
-    text-align: center;
-    padding: 10px 0;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    color: white;
+    font-size: 14px;
+    /* Ajusta o tamanho da fonte no rodapé */
+    padding: 8px 0;
   }
+}
